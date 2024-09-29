@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="backend.php">
+        <label for="name">Name</label>
+        <div>
+            <input type="text" name="myname" id="name">
+        </div>
+        <br>
+        <div>Role:
+            <input type="text" name="myRole" value="">
+        </div>
+        <br>
+        <div>Email:
+            <input type="email" name="myEmail">
+        </div>
+        <br>
+        <div> Date:
+            <input type="date" name="myDate">
+        </div>
+        <br>
+        <div> Bonus:
+            <input type="number">
+        </div>
+        <br>
+        <div>
+            Are you eligible?:
+            <input type="checkbox" name="myEligibility" checked>
+        </div>
+        <br>
+        <div>
+            Gender:
+            Male<input type="radio">
+            female<input type="radio">
+            others<input type="radio">
+        </div>
+
+        <br>
+        <div>
+            Write about Yourself:
+            <textarea name="myText" cols="5" rows="5"></textarea>
+        </div>
+
+        <br>
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="ind">Indica</option>
+                <option value="swift">Swift</option>
+            </select>
+
+        </div>
+        <br>
+        <div>
+            <button>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </button>
+        </div>
+    </form>
+
+    ----------------------------------
+    <p> In HTML, the level attribute isn't a standard attribute for any specific HTML element. However, it can often be
+        used as a custom data attribute, particularly for web development frameworks or specific JavaScript libraries to
+        manage different hierarchical levels or structural elements.
+        Here are a few contexts in which a level attribute might be used:</p>
+
+   <p>1.Heading Elements: Sometimes custom attributes like level are used in conjunction with JavaScript or CSS to denote
+    the level of headings dynamically.</p> 
+    <h1 level="1">Main Heading</h1>
+    <h2 level="2">Subheading</h2>
+
+    2.Custom Data Attributes: HTML5 allows for custom data attributes, which are prefixed with data-. These are often used
+    to store extra information that doesn't have any visual representation
+    <div data-level="1">Level 1</div>
+    <div data-level="2">Level 2</div>
+
+    3.Accessibility: In some cases, the aria-level attribute is used to define the hierarchical level of an element within
+    a structure.
+    <div role="heading" aria-level="1">Main Heading</div>
+    Custom Tags or Components: In web development frameworks like React, Angular, or Vue.js, custom attributes can be
+    defined and used for various purposes.
+
+
+    <custom-component level="1">Content</custom-component>
+    In all these cases, the level attribute is not a part of standard HTML but is used to provide additional information
+    for scripts, styles, or accessibility purposes.
+
+</body>
+
+</html>

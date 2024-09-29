@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let Arr=["sa","da", "isj","fff"]
+    for (let i=0; i < Arr.length;i++)
+    {
+        console.log("hello bb" +Arr[i])
+    }
+
+    Arr.forEach(function f(element)
+    {
+        console.log(element)
+    })
+
+    for(element of Arr)
+    {
+        console.log(element)
+    }
+
+    let emp={
+        name:"isha",
+        age:"9",
+        sal:"7899"
+    }
+
+    for (key in emp)
+    {
+        console.log('the ${key} of emp is ${emp[key]}')
+    }
+    let i=0;
+    while(i<9)
+    {
+        console.log('${key} is less than 9')
+        i++;
+    }
+     let j=6;
+    do{
+        console.log('${key} is less than 9')
+        i++;
+    }while(j<9)
+
+</script>
+    
+</body>
+</html>

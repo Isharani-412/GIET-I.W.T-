@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str="ThAs is a string"
+        console.log(str)
+        // first occurence of a substring
+        var position= str.indexOf('is')
+        console.log(position)   //2
+        // last occurence of a substring
+        position= str.lastIndexOf('is')
+        console.log(position)       //3
+        // substring from a string
+        var position=str.slice(1,3)
+        console.log(position)       //hi
+        // substr 
+        position=str.substring(1,3)
+        console.log(position)         //hi
+        //  replace word
+        var replaced=str.replace('string','piki')
+        console.log(replaced)
+
+        // loweercase to uppercase
+        console.log(str.toUpperCase())
+        console.log(str.toLowerCase())
+
+        // add new string
+        var newString=str.concat('new string')
+        console.log(newString)
+
+        var striwithwhitespaces= "     this contain         whitespace    "
+        console.log(striwithwhitespaces)
+
+        // trim
+        console.log(striwithwhitespaces.trim())
+
+        // var char2= str.charAt(2);
+        // console.log(char2)
+
+        var char2= str.charCodeAt(2)  //ascii value
+        console.log(char2)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

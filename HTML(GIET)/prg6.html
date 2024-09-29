@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 3px solid blue;
+            /* initialise the contain as a flex box */
+            display: flex;
+            /* flex propertys */
+            flex-direction: row;
+            /* flex-direction: column;  */
+            /* flex-direction:row-reverse ; */
+            flex-wrap: wrap;
+            /* flex-flow: row wrap; */
+            justify-content: center;
+            justify-content: space-between;
+            /* justify-content:space-evenly ; */
+            align-items: center;
+            align-items: flex-end;
+
+            background-image: url("night wall1.jpg");
+        }
+
+        .Item {
+            background-color: tomato;
+            border: 3px solid green;
+            margin: 10px;
+            padding: 30px;
+            height: 200px;
+            width: 150px;
+
+        }
+
+        #id1 {
+            order: 4;     /*id1 will be in 5th place*/
+            background-color: blueviolet;
+        }
+/*  order CSS property sets the order to lay out an item in a flex or grid container.
+ Items in a container are sorted by ascending order value and then by their source code order. */
+        #id2 {
+           
+            background-color: blue;
+        }
+
+        #id3 {
+            order: 1;     /* 2nd place*/
+            background-color: rgb(0, 255, 47);
+        }
+
+        #id4 {
+
+            background-color: rgb(216, 30, 173);
+        }
+
+        #id5 {
+
+            background-color: rgb(174, 208, 71);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="Screenshot (31).png"> -->
+    <h1>this is flexbox tutorial</h1>
+    <div class="container">
+
+        <div class="Item" id="id1">first box</div>
+        <div class="Item" id="id2">2nd box</div>
+        <div class="Item" id="id3">3rd box</div>
+        <div class="Item" id="id4">4th box</div>
+        <div class="Item" id="id5">5th box</div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>home </li>
+            <li>about </li>
+            <li>contact </li>
+            <li>services </li>
+            <li>more about </li>
+        </ul>
+    </div>
+    <div class="container">
+        another container
+    </div>
+
+    <script>
+        let main = document.getElementById('main');
+        console.log('main');
+        let container = document.getElementsByClassName('container');
+        console.log(container);
+
+        let sel1 = document.querySelector('#nav>li');
+        console.log("selector returns", sel1);
+        let sel2 = document.querySelectorAll('#nav>li');
+        console.log("All li elements:", sel2);
+
+        let servicesItem = document.querySelector('#nav > li:nth-child(4)');
+        console.log("Specific li:", servicesItem.textContent); // This assumes "services" is the 4th li
+
+        // To log the text content of each li element
+        let allItems = document.querySelectorAll('#nav > li');
+        allItems.forEach(item => console.log(item.textContent));
+
+    </script>
+</body>
+
+</html>

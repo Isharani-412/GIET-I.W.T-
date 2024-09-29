@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //q1 
+        let marks = {
+            isha: 55,
+            javi: 99,
+            kal: 78
+        }
+        for ( let i=0;i<Object.keys(marks).length;i++) {
+            // console.log(Object.keys(marks))
+            // console.log(Object.keys(marks)[i])
+             console.log(marks[Object.keys(marks)[i]])
+             console.log("marks of " +Object.keys(marks)[i] + "is " +marks[Object.keys(marks)[i]])
+
+        }
+
+        //q2
+        for (let keys in marks){
+            console.log("marks of " +keys+ "are " + marks[key])
+        }
+        //q3
+        let cn=6
+        let i
+        i=prompt("enter a no")
+            while(i!=cn){
+                console.log("try again")
+            }
+        console.log("you've entered the right no")
+
+            //q4(arrow function)
+        const mean=(a,b,c,d,e)=>{
+            return(a+b+c+d+e)/5
+        }
+        console.log(mean(1,2,3,4,5))
+
+
+    </script>
+
+</body>
+
+</html>

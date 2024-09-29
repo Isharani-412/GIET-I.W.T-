@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        padding: 40px;
+        margin: 34px;
+        width: 500px ;
+        background-color:blue ;
+    }
+    .box1{
+        background-color:blueviolet ;
+        width: 50px;
+        height: 50px ;
+        position: relative ;
+        animation-name: isha1;
+        animation-duration: 4s;
+        animation-iteration-count:2 ;
+        /* animation-fill-mode: ; */
+        animation-timing-function:ease-in ;
+        animation-delay: 3s ;
+        animation-direction: reverse;
+
+    }
+    .box2{
+        background-color:blueviolet ;
+        width: 70px;
+        height: 70px ;
+        position: relative ;
+        animation-name: isha2;
+        animation-duration: 4s;
+        animation-iteration-count:2 ;
+        /* animation-fill-mode: ; */
+        animation-timing-function:ease-in ;
+        animation-delay: 3s ;
+        animation-direction: reverse;
+
+    }
+
+    @keyframes isha1{
+       0%{
+        top:0px;
+        left:0px;
+       } 
+       25%{
+        top:250px;
+        left:0px;
+       } 
+       75%{
+        top:250px;
+        left:250px;
+       } 
+       100%{
+        top:0px;
+        left:250px;
+       } 
+
+    }
+    @keyframes isha2{
+       0%{
+        top:0px;
+        left:250px;
+       } 
+       25%{
+        top:250px;
+        left:250px;
+       } 
+       75%{
+        top:250px;
+        left:0px;
+       }                                                         b
+       100%{
+        top:0px;
+        left:0px;
+       } 
+    }
+    /* @keyframes isha{
+        from{
+            width: 100px;
+        }
+        to{
+            width:4500px;
+        }
+    } */
+</style>
+
+<body>
+    <div class="container">
+        <div class="box1">
+             box
+        </div>
+        <div class="box2">
+             box 
+        </div>
+    </div>
+    
+</body>
+</html>

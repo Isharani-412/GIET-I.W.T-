@@ -1,0 +1,246 @@
+ <!-- HTML (Hypertext Markup Language) -->
+
+<!-- Introduction -->
+<!-- HTML is the foundation of web development. It is used to create the structure and content of a web page.
+  HTML documents are plain text files that contain a combination of text content and HTML elements, which define the structure and layout of the content. -->
+
+ <!-- Basic Structure of an HTML Document -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+
+
+ <!-- HTML Formatting
+- *Headings*: <h1> to <h6>
+- *Paragraph*: <p>
+- *Bold*: <b> or <strong>
+- *Italic*: <i> or <em>
+- *Line Break*: <br>
+- *Horizontal Rule*: <hr>
+- *Blockquote*: <blockquote> -->
+<!-- <blockquote> tag specifies a section that is quoted from another source.
+     Browsers usually indent <blockquote> elements -->
+
+ <!-- Hyperlinks -->
+<!-- Hyperlinks allow navigation between different pages or resources. -->
+
+<a href="https://www.example.com">Visit Example.com</a>
+
+
+ <!-- Lists -->
+- *Ordered List*: Uses <ol> and <li>
+    
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    
+- *Unordered List*: Uses <ul> and <li>
+    
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+    
+- *Definition List*: Uses <dl>, <dt>, and <dd>
+    html
+    <dl>
+        <dt>Term 1</dt>
+        <dd>Definition 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition 2</dd>
+    </dl>
+    
+
+<!-- Tables -->
+<!-- Tables organize data into rows and columns. -->
+
+<table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+    </tr>
+</table>
+
+
+ <!-- Images -->
+<!-- Images are added using the <img> tag. -->
+<img src="image.jpg" alt="Description of Image">
+
+
+ <!-- Forms -->
+<!-- Forms collect user input.The user input is most often sent to a server for processing.
+ -->
+<form action="/submit_form" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="Submit">
+</form>
+
+
+<!-- Frames -->
+<!-- Frames were used to display multiple HTML documents in one window. However, they are now obsolete. -->
+
+<frameset cols="50%,50%">
+    <frame src="page1.html">
+    <frame src="page2.html">
+</frameset>
+
+
+ <!-- CSS (Cascading Style Sheets) -->
+
+<!-- CSS is used to style HTML elements. It controls the layout, colors, fonts, and overall presentation of the web page. -->
+ <!-- Types of CSS -->
+<!-- - *Inline CSS*: Applied directly to an HTML element using the style attribute. -->
+    
+    <p style="color: red;">This is a red paragraph.</p>
+    
+<!--  *Internal CSS*: Defined within a <style> tag in the <head> section. -->
+<!-- 
+    <head>
+        <style>
+            p {
+                color: blue;
+            }
+        </style>
+    </head>
+     -->
+<!-- *External CSS*: Linked to an HTML document via the <link> tag. -->
+<!-- 
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+     -->
+
+ <!-- CSS Syntax -->
+<!-- CSS rules are made up of selectors and declarations. -->
+<!--    css:
+        selector {
+            property: value;
+        } 
+ -->
+
+Example:
+css
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+
+### CSS Selectors
+- *Element Selector*: selects all HTML elements based on the element name. Selects all elements of a given type.
+    css
+    p {
+        color: green;
+    }
+    
+- *Class Selector*: Selects elements with a specific class attribute, denoted by a dot (.).
+    css
+    .intro {
+        font-size: 20px;
+    }
+    
+- *ID Selector*: Selects a single element with a specific id attribute, denoted by a hash (#).
+    css
+    #main {
+        width: 100%;
+    }
+    
+- *Descendant Selector*: Selects elements that are descendants of another element.
+    css
+    div p {
+        color: purple;
+    }
+    
+
+## XML (eXtensible Markup Language)
+
+XML is used to describe data. It is both human- and machine-readable, and is designed to be flexible and adaptable.
+
+### Structure of XML
+XML documents consist of elements with a start-tag, content, and end-tag.
+xml
+<note>
+    <to>Tove</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend!</body>
+</note>
+
+
+### Document Type Definition (DTD)
+DTD defines the structure and rules for an XML document.
+ It ensures that the document adheres to a predefined format.
+xml
+<!DOCTYPE note [
+    <!ELEMENT note (to,from,heading,body)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT heading (#PCDATA)>
+    <!ELEMENT body (#PCDATA)>
+]>
+<note>
+    <to>Tove</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend!</body>
+</note>
+
+
+### XML Schemas
+XML Schemas are used to define the structure, content, and semantics of XML documents using XML syntax. They are more powerful than DTDs.
+xml
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="note">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="to" type="xs:string"/>
+                <xs:element name="from" type="xs:string"/>
+                <xs:element name="heading" type="xs:string"/>
+                <xs:element name="body" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+### Document Object Model (DOM)
+The DOM is a programming interface for HTML and XML documents. It represents the document as a tree of objects. Each node in the tree is an object representing a part of the document. The DOM allows scripts to dynamically update the content, structure, and style of a document.
+
+#### Basic DOM Manipulation with JavaScript
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body>
+    <p id="demo">Hello World!</p>
+    <button type="button" onclick="changeText()">Click Me</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "You clicked the button!";
+        }
+    </script>
+</body>
+</html>

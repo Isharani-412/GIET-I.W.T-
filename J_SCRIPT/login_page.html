@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function login(t1,t2)
+		{
+		un=document.getElementById("t1").value
+		pw=document.getElementById("t2").value
+        console.log("name is :" +un );
+        console.log("password is :" +pw);
+		
+		}
+
+    </script>
+
+    <style>
+        form{
+            background-color: rgb(177, 177, 209);
+            border-radius: 3px;
+            width: 400px;
+            height: 400px;
+            border:2px solid blue;
+            font-size:20px ;
+            font-family: calibri;
+            color: brown;
+    
+        }
+        div{
+            color: crimson;
+            background-color: sandybrown;
+            border: 2px solid ;
+            display: inline-block;
+        }
+        .id3{
+            background-color: darkslategray;
+            color: aqua;
+            font-size: x-large;
+            border:  3px solid rgb(89, 89, 184);
+            border-radius:5px ;
+        }
+        h1{
+            font-size: 40px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <center>
+        <h1>Login Page</h1>
+    
+    <form name="f1">
+        <div>
+         User Name:<input type="text" id="t1" size="20" maxlength="10" value="">
+        </div>
+        <br><br>
+        <div>
+         Password: <input type="password" id="t2" size="20" maxlength="10" value="">
+        </div><br><br>
+        <div>
+           <input type="button" value="login" class="id3" id="t3" onclick="login(f1.t1.value,f1.t2.value)">
+        </div>
+
+        </form>
+    </table>
+</center>
+    
+</body>
+</html>
